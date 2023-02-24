@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-transition {
+  @apply transition duration-500 ease-in-out;
+}
+
+.hamburger--open > span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger--open > span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger--open > span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
