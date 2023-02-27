@@ -1,10 +1,10 @@
-import chaneln5 from '../../assets/images/products-section/chanel-n5.jpg';
-import lipstick from '../../assets/images/products-section/lipstick.jpg';
-import oilSerum from '../../assets/images/products-section/oil-serum.jpg';
-import shampoo from '../../assets/images/products-section/shampoo.jpg';
-import PopularProductsItems from '../PopularProductsItems';
-import ProductsItem from '../ProductsItem';
-import SectionHeader from '../SectionHeader';
+import PopularProductsItems from '@/components/PopularProductsItems';
+import ProductsItem from '@/components/ProductsItem';
+import SectionHeader from '@/shared/SectionHeader';
+import chaneln5 from '@/assets/images/products-section/chanel-n5.jpg';
+import lipstick from '@/assets/images/products-section/lipstick.jpg';
+import oilSerum from '@/assets/images/products-section/oil-serum.jpg';
+import shampoo from '@/assets/images/products-section/shampoo.jpg';
 
 const PopularProducts = () => {
   return (

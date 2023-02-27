@@ -1,5 +1,5 @@
-import CategoriesTiles from '../CategoriesTiles';
-import SectionHeader from '../SectionHeader';
+import CategoriesTiles from '@/components/CategoriesTiles';
+import SectionHeader from '@/shared/SectionHeader';
 
 const Categories = () => {
   return (

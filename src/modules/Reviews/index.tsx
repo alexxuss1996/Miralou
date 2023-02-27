@@ -1,12 +1,12 @@
-import React, { useState, useRef, useLayoutEffect, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperType, EffectFlip, Navigation, Controller, A11y } from 'swiper';
 import 'swiper/css/bundle';
 
-import review1img from '../../assets/images/reviews/1.jpg';
-import review2img from '../../assets/images/reviews/2.jpg';
-import review3img from '../../assets/images/reviews/3.jpg';
-import QuoteIcon from '../QuoteIcon';
+import review1img from '@/assets/images/reviews/1.jpg';
+import review2img from '@/assets/images/reviews/2.jpg';
+import review3img from '@/assets/images/reviews/3.jpg';
+import QuoteIcon from '@/shared/QuoteIcon';
 
 const Reviews = () => {
   const quoteSliderRef = useRef<SwiperType>();

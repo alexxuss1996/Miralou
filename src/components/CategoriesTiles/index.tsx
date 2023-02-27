@@ -1,7 +1,7 @@
-import bodyOil from '../../assets/images/categories/body-oil.jpg';
-import men from '../../assets/images/categories/men.jpg';
-import eczema from '../../assets/images/categories/eczema.jpg';
-import cream from '../../assets/images/categories/cream.jpg';
+import bodyOil from '@/assets/images/categories/body-oil.jpg';
+import men from '@/assets/images/categories/men.jpg';
+import eczema from '@/assets/images/categories/eczema.jpg';
+import cream from '@/assets/images/categories/cream.jpg';
 
 const CategoriesTiles = () => {
   return (

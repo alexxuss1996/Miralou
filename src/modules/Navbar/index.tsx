@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import Hamburger from '../Hamburger';
-import Logo from '../Logo';
-import NavbarIconLinkGroup from '../NavbarIconLinkGroup';
-import NavMenu from '../NavMenu';
+import NavbarIconLinkGroup from '@/components/NavbarIconLinkGroup';
+import NavMenu from '@/components/NavMenu';
+import Hamburger from '@/shared/Hamburger';
+import Logo from '@/shared/Logo';
 
 const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);

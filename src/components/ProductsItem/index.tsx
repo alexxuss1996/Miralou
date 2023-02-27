@@ -1,6 +1,6 @@
-import ShoppingBagIcon from '../../assets/images/icons/feather/shopping-bag.svg';
-import HeartIcon from '../../assets/images/icons/feather/heart.svg';
-import EyeIcon from '../../assets/images/icons/feather/eye.svg';
+import ShoppingBagIcon from '@/assets/images/icons/feather/shopping-bag.svg';
+import HeartIcon from '@/assets/images/icons/feather/heart.svg';
+import EyeIcon from '@/assets/images/icons/feather/eye.svg';
 import ProductButton from '../ProductButton';
 
 interface IProduct {
@@ -18,16 +18,16 @@ const ProductsItem = ({
   productDiscountPercent,
 }: IProduct) => {
   return (
-    <li className="flex flex-col flex-wrap items-center gap-5 text-sm font-light text-">
-      <span className="block max-h-[360px] relative">
+    <li className="text- flex flex-col flex-wrap items-center gap-5 text-sm font-light">
+      <span className="relative block max-h-[360px]">
         <img src={productImgUrl} alt={productName} />
         {productDiscountPercent ? (
-          <span className="absolute top-5 left-0 w-20 h-6 bg-primary z-10 text-white text-base text-center font-normal">{`${productDiscountPercent}%`}</span>
+          <span className="absolute top-5 left-0 z-10 h-6 w-20 bg-primary text-center text-base font-normal text-white">{`${productDiscountPercent}%`}</span>
         ) : (
           ''
         )}
-        <span className="absolute inset-0 z-20 bg-opacity-0 hover:bg-black-alt/40 group/overlay hover:cursor-pointer bg-transition">
-          <span className="flex flex-col items-end justify-center gap-3 h-full mx-6 opacity-0 group-hover/overlay:opacity-100">
+        <span className="group/overlay bg-transition absolute inset-0 z-20 bg-opacity-0 hover:cursor-pointer hover:bg-black-alt/40">
+          <span className="mx-6 flex h-full flex-col items-end justify-center gap-3 opacity-0 group-hover/overlay:opacity-100">
             <ProductButton src={ShoppingBagIcon} />
             <ProductButton src={HeartIcon} />
             <ProductButton src={EyeIcon} />
@@ -47,7 +47,7 @@ const ProductsItem = ({
         ) : (
           <span className="text-gray-dark">{`$${productPrice?.toFixed(2)}`}</span>
         )}
-        <span className="text-gray-dark hover:underline decoration-2">{productName}</span>
+        <span className="text-gray-dark decoration-2 hover:underline">{productName}</span>
       </div>
     </li>
   );

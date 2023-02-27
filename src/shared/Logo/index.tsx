@@ -1,7 +1,7 @@
-import logoPngUrl from '../../assets/images/logo.png';
-import logoWhitePngUrl from '../../assets/images/logo-white.png';
-import logoSvgUrl from '../../assets/images/logo.svg';
-import logoWhiteSvgUrl from '../../assets/images/logo-white.svg';
+import logoPngUrl from '@/assets/images/logo.png';
+import logoWhitePngUrl from '@/assets/images/logo-white.png';
+import logoSvgUrl from '@/assets/images/logo.svg';
+import logoWhiteSvgUrl from '@/assets/images/logo-white.svg';
 
 interface Logo {
   isWhite?: boolean;

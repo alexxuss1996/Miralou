@@ -1,9 +1,8 @@
-import React from 'react';
-import Image1 from '../../assets/images/instagram/1.png';
-import Image2 from '../../assets/images/instagram/2.png';
-import Image3 from '../../assets/images/instagram/3.png';
-import Image4 from '../../assets/images/instagram/4.png';
-import Image5 from '../../assets/images/instagram/5.png';
+import Image1 from '@/assets/images/instagram/1.png';
+import Image2 from '@/assets/images/instagram/2.png';
+import Image3 from '@/assets/images/instagram/3.png';
+import Image4 from '@/assets/images/instagram/4.png';
+import Image5 from '@/assets/images/instagram/5.png';
 
 const Socials = () => {
   return (

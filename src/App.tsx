@@ -1,13 +1,13 @@
-import About from './components/About';
-import Categories from './components/Categories';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Navbar from './components/Navbar';
-import News from './components/News';
-import Partners from './components/Partners';
-import PopularProducts from './components/PopularProducts';
-import Reviews from './components/Reviews';
-import Socials from './components/Socials';
+import About from './modules/About';
+import Categories from './modules/Categories';
+import Footer from './modules/Footer';
+import Hero from './modules/Hero';
+import Navbar from './modules/Navbar';
+import News from './modules/News';
+import Partners from './modules/Partners';
+import PopularProducts from './modules/PopularProducts';
+import Reviews from './modules/Reviews';
+import Socials from './modules/Socials';
 
 function App() {
   return (

@@ -1,5 +1,5 @@
-import heroWoman from '../../assets/images/common/header-woman.jpg';
-import heroWoman2x from '../../assets/images/common/header-woman@2x.jpg';
+import heroWoman from '@/assets/images/common/header-woman.jpg';
+import heroWoman2x from '@/assets/images/common/header-woman@2x.jpg';
 
 const Hero = () => {
   return (

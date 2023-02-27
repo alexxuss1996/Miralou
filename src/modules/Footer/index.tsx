@@ -1,17 +1,17 @@
 import React from 'react';
-import { Button } from '../Button';
-import Logo from '../Logo';
-import SocialIcon from '../SocialIcon';
-import ContactIcon from '../ContactIcon';
+import { Button } from '@/shared/Button';
+import Logo from '@/shared/Logo';
+import SocialIcon from '@/shared/SocialIcon';
+import ContactIcon from '@/shared/ContactIcon';
 
-import InstagramIcon from '../../assets/images/icons/feather/instagram.svg';
-import FacebookIcon from '../../assets/images/icons/feather/facebook.svg';
-import YouTubeIcon from '../../assets/images/icons/feather/youtube.svg';
-import TwitterIcon from '../../assets/images/icons/feather/twitter.svg';
+import InstagramIcon from '@/assets/images/icons/feather/instagram.svg';
+import FacebookIcon from '@/assets/images/icons/feather/facebook.svg';
+import YouTubeIcon from '@/assets/images/icons/feather/youtube.svg';
+import TwitterIcon from '@/assets/images/icons/feather/twitter.svg';
 
-import MapIcon from '../../assets/images/icons/feather/map-pin.svg';
-import PhoneIcon from '../../assets/images/icons/feather/phone.svg';
-import MailIcon from '../../assets/images/icons/feather/mail.svg';
+import MapIcon from '@/assets/images/icons/feather/map-pin.svg';
+import PhoneIcon from '@/assets/images/icons/feather/phone.svg';
+import MailIcon from '@/assets/images/icons/feather/mail.svg';
 
 const Footer = () => {
   return (

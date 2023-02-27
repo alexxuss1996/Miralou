@@ -1,5 +1,5 @@
-import AboutImg from '../../assets/images/common/woman-about.jpg';
-import AboutImg2x from '../../assets/images/common/woman-about@2x.jpg';
+import AboutImg from '@/assets/images/common/woman-about.jpg';
+import AboutImg2x from '@/assets/images/common/woman-about@2x.jpg';
 
 const About = () => {
   return (
