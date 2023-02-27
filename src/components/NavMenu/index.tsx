@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 type NavMenuType = {
   isMobileOpen: boolean;
 };
@@ -18,28 +20,37 @@ const NavMenu = ({ isMobileOpen }: NavMenuType) => {
         }
       >
         <li className="mr-5 w-full sm:mr-8">
-          <a href="/" className="inline-block cursor-pointer hover:underline">
+          <NavLink to={'/'} className="inline-block cursor-pointer hover:underline">
             Home
-          </a>
+          </NavLink>
         </li>
         <li className="mr-5 w-full sm:mr-8">
-          <a href="/shop" className="mx-auto inline-block w-full cursor-pointer hover:underline">
+          <NavLink
+            to={'/shop'}
+            className="mx-auto inline-block w-full cursor-pointer hover:underline"
+          >
             Shop
-          </a>
+          </NavLink>
         </li>
         <li className="mr-5 w-full sm:mr-8">
-          <a href="/product" className="mx-auto inline-block w-full cursor-pointer hover:underline">
-            Product
-          </a>
+          <NavLink
+            to={'/about'}
+            className="mx-auto inline-block w-full cursor-pointer hover:underline"
+          >
+            About
+          </NavLink>
         </li>
         <li className="mr-5 w-full sm:mr-8">
-          <a href="/blog" className="mx-auto inline-block w-full cursor-pointer hover:underline">
+          <NavLink
+            to={'/blog'}
+            className="mx-auto inline-block w-full cursor-pointer hover:underline"
+          >
             Blog
-          </a>
+          </NavLink>
         </li>
         <li className="mr-0">
-          <a href="/pages" className="mx-auto inline-block w-full cursor-pointer hover:underline">
-            Page
+          <a href="##" className="mx-auto inline-block w-full cursor-pointer hover:underline">
+            Pages
           </a>
         </li>
       </ul>

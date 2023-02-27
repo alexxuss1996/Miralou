@@ -6,6 +6,10 @@
   @apply transition duration-500 ease-in-out;
 }
 
+nav ul li a.active {
+  @apply text-accent underline md:text-gray-dark;
+}
+
 .hamburger--open > span:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }

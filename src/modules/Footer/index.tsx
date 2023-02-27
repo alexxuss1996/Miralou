@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from '@/shared/Button';
 import Logo from '@/shared/Logo';
 import SocialIcon from '@/shared/SocialIcon';
@@ -14,18 +15,22 @@ import PhoneIcon from '@/assets/images/icons/feather/phone.svg';
 import MailIcon from '@/assets/images/icons/feather/mail.svg';
 
 const Footer = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   return (
-    <footer className="bg-black pt-16">
+    <footer className="bg-black">
       <div className="container flex flex-col">
-        <div className="flex flex-col justify-between border-b-2 border-white pb-6 md:flex-row">
-          <h2 className="mb-3 text-xl text-white md:mb-1 lg:text-2xl xl:text-3xl">
-            Subscribe to receive 10% off your next purchase. <br /> Plus hear about our new arrivals
-            and offers.
-          </h2>
-          <Button className="inline-block self-center bg-accent py-4 px-8 text-sm font-light uppercase text-white md:px-10">
-            Contact Us
-          </Button>
-        </div>
+        {isHomePage && (
+          <div className="flex flex-col justify-between border-b-2 border-white pt-16 pb-6 md:flex-row">
+            <h2 className="mb-3 text-xl text-white md:mb-1 lg:text-2xl xl:text-3xl">
+              Subscribe to receive 10% off your next purchase. <br /> Plus hear about our new
+              arrivals and offers.
+            </h2>
+            <Button className="inline-block self-center bg-accent py-4 px-8 text-sm font-light uppercase text-white md:px-10">
+              Contact Us
+            </Button>
+          </div>
+        )}
 
         <div className="flex flex-row flex-wrap justify-between border-b border-white/40 py-10">
           <div className="flex h-48 flex-col justify-evenly md:w-6/12 lg:w-2/12 lg:justify-between">
@@ -61,9 +66,9 @@ const Footer = () => {
             <h3 className="mb-8 text-2xl text-white">Information</h3>
             <ul>
               <li className="mb-5">
-                <a href="/" className="font-light text-white/60">
+                <NavLink to={'/about'} className="font-light text-white/60">
                   About Miralou
-                </a>
+                </NavLink>
               </li>
               <li className="mb-5">
                 <a href="/" className="font-light text-white/60">
