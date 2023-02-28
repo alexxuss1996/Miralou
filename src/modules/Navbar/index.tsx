@@ -20,7 +20,7 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <header className="flex h-[86px] w-full border-b-[1px] border-gray bg-white">
+    <header className="flex h-[86px] w-full border-b-[1px] border-gray-light bg-white">
       <div className="container flex items-center justify-between">
         <Logo />
         <NavMenu isMobileOpen={open} />
