@@ -1,4 +1,4 @@
-import PopularProductsItems from '@/components/PopularProductsItems';
+import ItemsWrapper from '@/components/ItemsWrapper';
 import ProductsItem from '@/components/ProductsItem';
 import SectionHeader from '@/shared/SectionHeader';
 import chaneln5 from '@/assets/images/products-section/chanel-n5.jpg';
@@ -14,7 +14,7 @@ const PopularProducts = () => {
           heading="Popular Product"
           paragraphText="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien."
         />
-        <PopularProductsItems>
+        <ItemsWrapper>
           <ProductsItem
             productImgUrl={chaneln5}
             productName="Parfume Chanel №5"
@@ -32,7 +32,7 @@ const PopularProducts = () => {
             productPrice={50}
             productDiscountPercent={20}
           />
-        </PopularProductsItems>
+        </ItemsWrapper>
       </div>
     </section>
   );

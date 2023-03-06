@@ -12,11 +12,11 @@ const HomePage = () => {
     <>
       <Hero />
       <Partners />
-      <Categories />
+      <Categories hasHead />
       <PopularProducts />
       <About />
       <News />
-      <Reviews />
+      <Reviews hasImageOffset />
       <Socials />
     </>
   );

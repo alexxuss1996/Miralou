@@ -1,16 +1,15 @@
 import { ReactSVG } from 'react-svg';
 
-interface IProductButton {
+interface IOverlayLink {
   src: string;
 }
-const ProductButton = ({ src }: IProductButton) => {
+const OverlayLink = ({ src }: IOverlayLink) => {
   return (
     <button className="bg-transition group/product-btn flex h-8 w-8 items-center justify-center rounded-full bg-white hover:bg-accent">
       <ReactSVG
         beforeInjection={(svg) => {
           svg.classList.add('group-hover/product-btn:stroke-white');
         }}
-        className="social-icon"
         evalScripts="always"
         fallback={() => <span>Error!</span>}
         httpRequestWithCredentials={true}
@@ -27,4 +26,4 @@ const ProductButton = ({ src }: IProductButton) => {
   );
 };
 
-export default ProductButton;
+export default OverlayLink;

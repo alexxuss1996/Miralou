@@ -1,24 +1,24 @@
 import ShoppingBagIcon from '@/assets/images/icons/feather/shopping-bag.svg';
 import HeartIcon from '@/assets/images/icons/feather/heart.svg';
 import EyeIcon from '@/assets/images/icons/feather/eye.svg';
-import ProductButton from '../ProductButton';
+import OverlayLink from '@/shared/OverlayLink';
 
-interface IProduct {
+type ProductType = {
   productImgUrl: string;
   productPath?: string;
   productName: string;
   productPrice: number;
   productDiscountPercent?: number;
-}
+};
 
 const ProductsItem = ({
   productImgUrl,
   productName,
   productPrice,
   productDiscountPercent,
-}: IProduct) => {
+}: ProductType) => {
   return (
-    <li className="text- flex flex-col flex-wrap items-center gap-5 text-sm font-light">
+    <li className="flex flex-col flex-wrap items-center gap-5 text-sm font-light">
       <span className="relative block max-h-[360px]">
         <img src={productImgUrl} alt={productName} />
         {productDiscountPercent ? (
@@ -28,9 +28,9 @@ const ProductsItem = ({
         )}
         <span className="group/overlay bg-transition absolute inset-0 z-20 bg-opacity-0 hover:cursor-pointer hover:bg-black-alt/40">
           <span className="mx-6 flex h-full flex-col items-end justify-center gap-3 opacity-0 group-hover/overlay:opacity-100">
-            <ProductButton src={ShoppingBagIcon} />
-            <ProductButton src={HeartIcon} />
-            <ProductButton src={EyeIcon} />
+            <OverlayLink src={ShoppingBagIcon} />
+            <OverlayLink src={HeartIcon} />
+            <OverlayLink src={EyeIcon} />
           </span>
         </span>
       </span>

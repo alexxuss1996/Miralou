@@ -8,7 +8,10 @@ import review2img from '@/assets/images/reviews/2.jpg';
 import review3img from '@/assets/images/reviews/3.jpg';
 import QuoteIcon from '@/shared/QuoteIcon';
 
-const Reviews = () => {
+type ReviewType = {
+  hasImageOffset?: boolean;
+};
+const Reviews = ({ hasImageOffset }: ReviewType) => {
   const quoteSliderRef = useRef<SwiperType>();
   const imgSliderRef = useRef<SwiperType>();
 
@@ -32,15 +35,22 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section className="relative py-3">
+    <section className={hasImageOffset ? 'relative py-3' : 'relative py-12'}>
       <div className="container flex flex-col flex-wrap md:flex-row">
-        <div className="w-full space-x-5 pb-3 md:h-[356px] md:w-7/12">
+        <div
+          className={
+            hasImageOffset
+              ? 'w-full space-x-5 pb-3 md:h-[356px] md:w-7/12'
+              : 'w-full space-x-5 pb-3 md:h-[480px] md:w-7/12'
+          }
+        >
           <Swiper
             modules={[Navigation, Controller, EffectFlip, A11y]}
             speed={1000}
             effect="flip"
             slidesPerView={1}
             wrapperClass="quote-swiper"
+            className="h-full"
             loop={true}
             navigation
             tag="section"
@@ -49,7 +59,13 @@ const Reviews = () => {
             }}
           >
             <SwiperSlide>
-              <div className="flex w-full flex-col items-center justify-center md:h-[300px]">
+              <div
+                className={
+                  hasImageOffset
+                    ? 'flex w-full flex-col items-center justify-center md:h-[300px]'
+                    : 'flex h-full w-full flex-col items-center justify-center'
+                }
+              >
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -59,7 +75,13 @@ const Reviews = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex w-full flex-col  items-center justify-center md:h-[300px]">
+              <div
+                className={
+                  hasImageOffset
+                    ? 'flex w-full flex-col items-center justify-center md:h-[300px]'
+                    : 'flex h-full w-full flex-col items-center justify-center'
+                }
+              >
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -69,7 +91,13 @@ const Reviews = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex w-full flex-col items-center justify-center md:h-[300px]">
+              <div
+                className={
+                  hasImageOffset
+                    ? 'flex w-full flex-col items-center justify-center md:h-[300px]'
+                    : 'flex h-full w-full flex-col items-center justify-center'
+                }
+              >
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -80,7 +108,13 @@ const Reviews = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="top-[-72px] right-0 w-full md:relative md:h-[380px] md:w-5/12">
+        <div
+          className={
+            hasImageOffset
+              ? 'top-[-72px] right-0 w-full md:relative md:h-[380px] md:w-5/12'
+              : 'w-full md:relative md:w-5/12'
+          }
+        >
           <Swiper
             modules={[Controller, A11y]}
             wrapperClass="img-slider"
