@@ -1,10 +1,10 @@
 import About from '@/modules/About';
 import Categories from '@/modules/Categories';
 import Hero from '@/modules/Hero';
+import HomeReviews from '@/modules/HomeReviews';
 import News from '@/modules/News';
 import Partners from '@/modules/Partners';
 import PopularProducts from '@/modules/PopularProducts';
-import Reviews from '@/modules/Reviews';
 import Socials from '@/modules/Socials';
 
 const HomePage = () => {
@@ -16,7 +16,7 @@ const HomePage = () => {
       <PopularProducts />
       <About />
       <News />
-      <Reviews hasImageOffset />
+      <HomeReviews />
       <Socials />
     </>
   );

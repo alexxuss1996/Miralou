@@ -7,7 +7,7 @@
 }
 
 nav ul li a.active {
-  @apply text-accent underline md:text-gray-dark;
+  @apply text-accent underline md:text-black;
 }
 
 .hamburger--open > span:nth-child(1) {

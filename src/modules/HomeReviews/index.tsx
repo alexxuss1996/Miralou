@@ -11,19 +11,18 @@ import review2img from '@/assets/images/reviews/2.jpg';
 import review3img from '@/assets/images/reviews/3.jpg';
 import QuoteIcon from '@/shared/QuoteIcon';
 
-const Reviews = () => {
-  let quoteSliderRef = useRef<SwiperType | null>(null);
-  let imgSliderRef = useRef<SwiperType | null>(null);
+const HomeReviews = () => {
+  let homeQuoteSliderRef = useRef<SwiperType | null>(null);
+  let homeImgSliderRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     // Refs
+    const homeQuoteSlider = homeQuoteSliderRef?.current;
+    const homeImgSlider = homeImgSliderRef?.current;
 
-    const quoteSlider = quoteSliderRef?.current;
-    const imgSlider = imgSliderRef?.current;
-
-    if (quoteSlider?.controller && imgSlider?.controller) {
-      imgSlider.controller.control = quoteSlider;
-      quoteSlider.controller.control = imgSlider;
+    if (homeQuoteSlider?.controller && homeImgSlider?.controller) {
+      homeImgSlider.controller.control = homeQuoteSlider;
+      homeQuoteSlider.controller.control = homeImgSlider;
     }
     // navigation controls
     document.documentElement.style.setProperty('--swiper-theme-color', 'rgba(0, 0, 0, 0.4)');
@@ -34,21 +33,21 @@ const Reviews = () => {
       document.documentElement.style.setProperty('--swiper-theme-color', '#007aff');
       document.documentElement.style.setProperty('--swiper-navigation-size', '44px');
 
-      if (quoteSlider) {
-        quoteSlider.destroy(true, true);
-        quoteSliderRef.current = null;
+      if (homeQuoteSlider) {
+        homeQuoteSlider.destroy(true, true);
+        homeQuoteSliderRef.current = null;
       }
-      if (imgSlider) {
-        imgSlider.destroy(true, true);
-        imgSliderRef.current = null;
+      if (homeImgSlider) {
+        homeImgSlider.destroy(true, true);
+        homeImgSliderRef.current = null;
       }
     };
   }, []);
 
   return (
-    <section className="relative py-12">
-      <div className="container flex flex-col flex-wrap items-center md:flex-row">
-        <div className="w-full space-x-5 pb-3 md:h-[480px] md:w-7/12">
+    <section className="relative py-4">
+      <div className="container flex flex-col flex-wrap md:flex-row">
+        <div className={'w-full space-x-5 pb-3 md:h-[356px] md:w-7/12'}>
           <Swiper
             modules={[Navigation, Controller, EffectFlip, A11y]}
             speed={1000}
@@ -60,11 +59,11 @@ const Reviews = () => {
             navigation
             tag="section"
             onSwiper={(swiper) => {
-              quoteSliderRef.current = swiper;
+              homeQuoteSliderRef.current = swiper;
             }}
           >
             <SwiperSlide>
-              <div className="flex h-full w-full flex-col items-center justify-center">
+              <div className="flex w-full flex-col items-center justify-center md:h-[300px]">
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -74,7 +73,7 @@ const Reviews = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex h-full w-full flex-col items-center justify-center">
+              <div className="flex w-full flex-col items-center justify-center md:h-[300px]">
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -84,7 +83,7 @@ const Reviews = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="flex h-full w-full flex-col items-center justify-center">
+              <div className="flex w-full flex-col items-center justify-center md:h-[300px]">
                 <QuoteIcon />
                 <p className="px-12 text-center text-2xl font-medium leading-10">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere similique beatae
@@ -95,13 +94,13 @@ const Reviews = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="w-full md:relative md:w-5/12">
+        <div className="top-[-72px] right-0 w-full md:relative md:h-[380px] md:w-5/12">
           <Swiper
             modules={[Controller, A11y]}
             speed={300}
             loop={true}
             onSwiper={(swiper) => {
-              imgSliderRef.current = swiper;
+              homeImgSliderRef.current = swiper;
             }}
             slidesPerView={1}
           >
@@ -121,4 +120,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default HomeReviews;
