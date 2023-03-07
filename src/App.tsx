@@ -1,3 +1,4 @@
+import NotFoundPage from '@/pages/NotFoundPage';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import Footer from './modules/Footer';
 import Navbar from './modules/Navbar';
@@ -8,18 +9,19 @@ import ShopPage from './pages/ShopPage';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <main className="relative">
+      <main className="relative flex-grow">
         <Routes>
           <Route index path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 

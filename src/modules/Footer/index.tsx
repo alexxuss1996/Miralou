@@ -18,7 +18,7 @@ const Footer = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   return (
-    <footer className="bg-black">
+    <footer className="mt-auto bg-black">
       <div className="container flex flex-col">
         {isHomePage && (
           <div className="flex flex-col justify-between border-b-2 border-white pt-16 pb-6 md:flex-row">
