@@ -1,11 +1,11 @@
-import NotFoundPage from '@/pages/NotFoundPage';
+import Footer from '@/components/modules/Footer';
+import Navbar from '@/components/modules/Navbar';
+import AboutPage from '@/components/pages/AboutPage';
+import BlogPage from '@/components/pages/BlogPage';
+import HomePage from '@/components/pages/HomePage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
+import ShopPage from '@/components/pages/ShopPage';
 import { Route, Routes, Outlet } from 'react-router-dom';
-import Footer from './modules/Footer';
-import Navbar from './modules/Navbar';
-import AboutPage from './pages/AboutPage';
-import BlogPage from './pages/BlogPage';
-import HomePage from './pages/HomePage';
-import ShopPage from './pages/ShopPage';
 
 function App() {
   return (
