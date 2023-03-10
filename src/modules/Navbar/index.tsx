@@ -19,11 +19,15 @@ const Navbar = () => {
     }
   }, [open]);
 
+  const closeMobileMenu = () => {
+    setOpen(false);
+  };
+
   return (
     <header className="flex h-[86px] w-full border-b-[1px] border-gray-light bg-white">
       <div className="container flex items-center justify-between">
         <Logo />
-        <NavMenu isMobileOpen={open} />
+        <NavMenu isMobileOpen={open} closeMobileMenu={closeMobileMenu} />
         <NavbarIconLinkGroup />
         <Hamburger onClick={() => setOpen(!open)} isOpen={open} />
       </div>

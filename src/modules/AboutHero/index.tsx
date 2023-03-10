@@ -1,14 +1,13 @@
 import AboutUsImg from '@/assets/images/common/about-woman.jpg';
 import AboutUsImg2x from '@/assets/images/common/about-woman@2x.jpg';
 import { Button } from '@/shared/Button';
+import SectionHeading from '@/shared/SectionHeading';
 
 const AboutHero = () => {
   return (
     <section className="py-16 md:py-24">
       <div className="container">
-        <h1 className="mb-8 text-center text-2xl font-semibold md:mb-24 md:text-4xl lg:text-6xl">
-          About Us
-        </h1>
+        <SectionHeading text="About Us" />
         <div className="flex flex-col gap-5 md:flex-row">
           <div className="flex flex-col md:w-7/12">
             <h2 className="mb-8 text-xl font-semibold md:text-2xl lg:text-4xl">
