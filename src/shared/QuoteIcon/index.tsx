@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
-import quoteIcon from '@/assets/images/icons/feather/quote.svg';
+import quoteIcon from '@/assets/icons/vector/quote.svg';
 
 const QuoteIcon = () => {
   return (

@@ -1,12 +1,12 @@
 import ItemsWrapper from '@/components/ItemsWrapper';
 import TestimonialsItem from '@/components/TestimonialsItem';
 
-import WorldwideSvg from '@/assets/images/icons/worldwide.svg';
-import WorldwidePng from '@/assets/images/icons/png/worldwide.png';
-import SupportSvg from '@/assets/images/icons/support.svg';
-import SupportPng from '@/assets/images/icons/png/support.png';
-import SavingShopSvg from '@/assets/images/icons/saving-shop.svg';
-import SavingShopPng from '@/assets/images/icons/png/saving-shop.png';
+import WorldwideSvg from '@/assets/icons/vector/worldwide.svg';
+import WorldwidePng from '@/assets/icons/png/worldwide.png';
+import SupportSvg from '@/assets/icons/vector/support.svg';
+import SupportPng from '@/assets/icons/png/support.png';
+import SavingShopSvg from '@/assets/icons/vector/saving-shop.svg';
+import SavingShopPng from '@/assets/icons/png/saving-shop.png';
 
 const Testimonials = () => {
   return (

@@ -1,6 +1,6 @@
-import ShoppingBagIcon from '@/assets/images/icons/feather/shopping-bag.svg';
-import HeartIcon from '@/assets/images/icons/feather/heart.svg';
-import EyeIcon from '@/assets/images/icons/feather/eye.svg';
+import ShoppingBagIcon from '@/assets/icons/vector/shopping-bag.svg';
+import HeartIcon from '@/assets/icons/vector/heart.svg';
+import EyeIcon from '@/assets/icons/vector/eye.svg';
 import OverlayLink from '@/shared/OverlayLink';
 
 type ProductType = {

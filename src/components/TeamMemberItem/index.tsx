@@ -1,8 +1,8 @@
 import OverlayLink from '@/shared/OverlayLink';
 
-import FacebookIcon from '@/assets/images/icons/feather/facebook.svg';
-import TwitterIcon from '@/assets/images/icons/feather/twitter.svg';
-import InstagramIcon from '@/assets/images/icons/feather/instagram.svg';
+import FacebookIcon from '@/assets/icons/vector/facebook.svg';
+import TwitterIcon from '@/assets/icons/vector/twitter.svg';
+import InstagramIcon from '@/assets/icons/vector/instagram.svg';
 
 type Member = {
   name: string;

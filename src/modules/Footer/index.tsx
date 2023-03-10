@@ -5,14 +5,14 @@ import Logo from '@/shared/Logo';
 import SocialIcon from '@/shared/SocialIcon';
 import ContactIcon from '@/shared/ContactIcon';
 
-import InstagramIcon from '@/assets/images/icons/feather/instagram.svg';
-import FacebookIcon from '@/assets/images/icons/feather/facebook.svg';
-import YouTubeIcon from '@/assets/images/icons/feather/youtube.svg';
-import TwitterIcon from '@/assets/images/icons/feather/twitter.svg';
+import InstagramIcon from '@/assets/icons/vector/instagram.svg';
+import FacebookIcon from '@/assets/icons/vector/facebook.svg';
+import YouTubeIcon from '@/assets/icons/vector/youtube.svg';
+import TwitterIcon from '@/assets/icons/vector/twitter.svg';
 
-import MapIcon from '@/assets/images/icons/feather/map-pin.svg';
-import PhoneIcon from '@/assets/images/icons/feather/phone.svg';
-import MailIcon from '@/assets/images/icons/feather/mail.svg';
+import MapIcon from '@/assets/icons/vector/map-pin.svg';
+import PhoneIcon from '@/assets/icons/vector/phone.svg';
+import MailIcon from '@/assets/icons/vector/mail.svg';
 
 const Footer = () => {
   const location = useLocation();
