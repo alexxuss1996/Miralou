@@ -1,9 +1,9 @@
 import React from 'react';
 import { ReactSVG } from 'react-svg';
 
-interface SocialIcon {
+type SocialIcon = {
   src: string;
-}
+};
 
 const SocialIcon = ({ src }: SocialIcon) => {
   return (

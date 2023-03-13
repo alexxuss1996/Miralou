@@ -14,7 +14,7 @@ function App() {
       <main className="relative flex-grow">
         <Routes>
           <Route index path="/" element={<HomePage />} />
-          <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop" element={<ShopPage />} />x
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="*" element={<NotFoundPage />} />
