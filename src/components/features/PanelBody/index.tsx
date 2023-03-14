@@ -57,7 +57,7 @@ const PanelBody = ({ panelIsOpen }: PanelBodyType) => {
       </div>
       <div className="price mb-5 flex flex-col md:mb-0">
         <h3 className="mb-4 text-xl font-medium text-black md:text-base">Price</h3>
-        <input type="radio" name="price" id="all" checked className="appearance-none" />
+        <input type="radio" name="price" id="all" defaultChecked className="appearance-none" />
         <label htmlFor="all" className="text-light mb-5 cursor-pointer">
           All
         </label>

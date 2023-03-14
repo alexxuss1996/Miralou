@@ -8,6 +8,7 @@ type ProductType = {
   productImgUrl: string;
   productPath?: string;
   productName: string;
+  popularity?: number;
   productPrice: number;
   productDiscountPercent?: number;
 };
@@ -20,10 +21,10 @@ const ProductsItem = ({
 }: ProductType) => {
   return (
     <li className="flex flex-col flex-wrap items-center gap-5 text-sm font-light">
-      <span className="relative block max-h-[360px]">
-        <img src={productImgUrl} alt={productName} />
+      <span className="relative block max-h-[360px] md:max-w-[300px]">
+        <img src={productImgUrl} alt={productName} className="max-w-full object-cover" />
         {productDiscountPercent ? (
-          <span className="absolute top-5 left-0 z-10 h-6 w-20 bg-primary text-center text-base font-normal text-white">{`${productDiscountPercent}%`}</span>
+          <span className="absolute top-5 left-0 z-10 h-6 w-20 bg-primary text-center text-base font-normal text-white">{`-${productDiscountPercent}%`}</span>
         ) : (
           ''
         )}

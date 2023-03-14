@@ -44,6 +44,7 @@ const SortSelect = () => {
       ...provided,
       borderRadius: 0,
       marginTop: '1px',
+      zIndex: '100',
     }),
     menuList: (provided) => ({
       ...provided,
