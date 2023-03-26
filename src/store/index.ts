@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { productsApi } from '@/store/features/productsApi';
+import { productsApi } from '@/store/services/api/productsApi';
+import productsSlice from '@/store/slices/productsSlice';
+import paginationSlice from '@/store/slices/paginationSlice';
 
 export const store = configureStore({
   reducer: {
-    // Add the generated reducer as a specific top-level slice
     [productsApi.reducerPath]: productsApi.reducer,
+    products: productsSlice,
+    pagination: paginationSlice,
   },
-  // Adding the api middleware enables caching, invalidation, polling,
-  // and other useful features of `rtk-query`.
+
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware),
 });
 

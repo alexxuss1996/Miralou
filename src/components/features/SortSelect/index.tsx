@@ -1,5 +1,7 @@
 import React from 'react';
-import Select, { StylesConfig } from 'react-select';
+import { useAppDispatch, useAppSelector } from '@/hooks';
+import Select, { StylesConfig, ActionMeta, OnChangeValue } from 'react-select';
+import { setSortBy } from '@/store/slices/productsSlice';
 type Option = {
   value: string;
   label: string;
@@ -11,11 +13,11 @@ type CustomStyles = StylesConfig<Option, boolean> & {
 
 const SortSelect = () => {
   const selectOptions: Option[] = [
+    { value: 'none', label: 'No Sort' },
     { value: 'name', label: 'Name' },
     { value: 'rating', label: 'Rating' },
-    { value: 'newest', label: 'Newest' },
+    { value: 'latest', label: 'Newest' },
     { value: 'high-to-low', label: 'By price: high to low' },
-    { value: 'low-to-high', label: 'By price: low to high' },
   ];
   const customStyles: CustomStyles = {
     control: (provided, state) => ({
@@ -76,7 +78,25 @@ const SortSelect = () => {
     }),
   };
 
-  return <Select styles={customStyles} options={selectOptions} placeholder="Sort by..." />;
+  const dispatch = useAppDispatch();
+
+  const { sortBy } = useAppSelector((state) => state.products);
+  const handleSelectionChange = (selectedOption: OnChangeValue<Option, boolean>) => {
+    if (selectedOption) {
+      const value = (selectedOption as Option).value;
+      dispatch(setSortBy(value));
+    }
+  };
+
+  return (
+    <Select
+      styles={customStyles}
+      options={selectOptions}
+      value={selectOptions.find((option) => option.value === sortBy)}
+      onChange={handleSelectionChange}
+      placeholder="Sort by..."
+    />
+  );
 };
 
 export default SortSelect;

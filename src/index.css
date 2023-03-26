@@ -46,3 +46,21 @@ nav ul li a.active {
 .sort-by > input[type='radio']:checked + label {
   @apply text-accent;
 }
+
+.pagination-button {
+  @apply mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-white text-black transition duration-500 ease-in-out hover:bg-primary hover:text-white;
+}
+
+.pagination-button.active {
+  @apply mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary text-white transition duration-500 ease-in-out;
+}
+
+button[disabled].prev,
+button[disabled].next {
+  color: #666;
+}
+
+button[disabled].first,
+button[disabled].last {
+  color: #ccc;
+}

@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-type ProductResponseType = {
-  created_at: Date;
+export type ProductResponseType = {
+  created_at: string;
   name: string;
-  image_url: string;
+  image_thumb_url: string;
+  images: string[];
   price: string;
   discount_percent: string;
   description: string;

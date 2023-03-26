@@ -2,7 +2,7 @@ import ItemsWrapper from '@/components/features/ItemsWrapper';
 import ProductsItem from '@/components/features/ProductsItem';
 import SectionHeader from '@/components/features/SectionHeader';
 
-import { useGetProductsQuery } from '@/store/features/productsApi';
+import { useGetProductsQuery } from '@/store/services/api/productsApi';
 const PopularProducts = () => {
   const { data: products } = useGetProductsQuery();
 
@@ -21,7 +21,7 @@ const PopularProducts = () => {
           {popularProducts?.map((product) => (
             <ProductsItem
               key={product.id}
-              productImgUrl={product.image_url}
+              productImgUrl={product.image_thumb_url}
               productDiscountPercent={parseFloat(product.discount_percent)}
               productName={product.name}
               productPrice={parseFloat(product.price)}
