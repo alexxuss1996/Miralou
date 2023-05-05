@@ -54,11 +54,7 @@ nav ul li a.active {
 .pagination-button.active {
   @apply mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary text-white transition duration-500 ease-in-out;
 }
-
-.product-slider .slider-thumbs .swiper-slide {
-  @apply border-[3px] border-[transparent];
-}
-.product-slider .slider-thumbs .swiper-slide-thumb-active {
+.product-slider .slider-thumbs .swiper-slide-thumb-active img {
   @apply border-[3px] border-red;
 }
 

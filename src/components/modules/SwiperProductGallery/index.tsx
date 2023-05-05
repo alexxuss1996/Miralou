@@ -26,7 +26,7 @@ const SwiperProductGallery = ({ images }: ProductGalleryType) => {
   }, []);
 
   return (
-    <div className="product-slider flex h-[600px] w-[660px] flex-row-reverse overflow-hidden">
+    <div className="product-slider flex h-[600px] w-[658px] flex-row-reverse overflow-hidden">
       <Swiper
         onSwiper={(swiper) => {
           if (swiper1Ref.current !== null) {
