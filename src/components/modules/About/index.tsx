@@ -1,5 +1,4 @@
 import AboutImg from '@/assets/images/common/woman-about.jpg';
-import AboutImg2x from '@/assets/images/common/woman-about@2x.jpg';
 
 const About = () => {
   return (
@@ -8,7 +7,6 @@ const About = () => {
         <div className="order-2 mr-5 md:order-none md:w-5/12">
           <img
             src={AboutImg}
-            srcSet={`${AboutImg} 1x, ${AboutImg2x} 2x`}
             alt="about"
             className="relative z-20 max-h-full w-full translate-y-0"
           />

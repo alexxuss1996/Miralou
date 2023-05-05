@@ -3,14 +3,15 @@ import OverlayLink from '@/components/shared/OverlayLink';
 import ShoppingBagIcon from '@/assets/icons/vector/shopping-bag.svg';
 import HeartIcon from '@/assets/icons/vector/heart.svg';
 import EyeIcon from '@/assets/icons/vector/eye.svg';
+import { Link } from 'react-router-dom';
 
 type ProductType = {
   productImgUrl: string;
-  productPath?: string;
   productName: string;
   popularity?: number;
   productPrice: number;
   productDiscountPercent?: number;
+  productId: string;
 };
 
 const ProductsItem = ({
@@ -18,6 +19,7 @@ const ProductsItem = ({
   productName,
   productPrice,
   productDiscountPercent,
+  productId,
 }: ProductType) => {
   return (
     <li className="flex flex-col flex-wrap items-center gap-5 text-sm font-light">
@@ -49,7 +51,9 @@ const ProductsItem = ({
         ) : (
           <span className="text-gray-dark">{`$${productPrice?.toFixed(2)}`}</span>
         )}
-        <span className="text-gray-dark decoration-2 hover:underline">{productName}</span>
+        <Link to={`/shop/${productId}`} className="text-gray-dark decoration-2 hover:underline">
+          {productName}
+        </Link>
       </div>
     </li>
   );

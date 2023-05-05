@@ -61,6 +61,7 @@ const ShopProducts = () => {
                 productDiscountPercent={Number(product.discount_percent)}
                 key={product.id}
                 productName={product.name}
+                productId={product.id}
               />
             ))
           ) : (

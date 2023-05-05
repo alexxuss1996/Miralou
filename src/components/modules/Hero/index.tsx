@@ -1,5 +1,4 @@
 import heroWoman from '@/assets/images/common/header-woman.jpg';
-import heroWoman2x from '@/assets/images/common/header-woman@2x.jpg';
 
 const Hero = () => {
   return (
@@ -18,12 +17,7 @@ const Hero = () => {
         </div>
         <div className="hidden justify-center space-x-5 md:flex md:w-5/12 ">
           <span className="relative z-10 before:absolute before:top-[-21.5%] before:left-[-17.5%] before:z-0 before:h-[75%] before:w-[75%] before:border-2 before:border-white before:opacity-0 before:content-[''] after:absolute after:bottom-[-21.5%] after:right-[-17.5%]  after:z-0 after:h-[75%] after:w-[75%] after:border-2 after:border-white after:opacity-0 after:content-[''] md:before:opacity-100 md:after:opacity-100">
-            <img
-              src={heroWoman}
-              srcSet={`${heroWoman} 1x, ${heroWoman2x} 2x`}
-              alt="moisture"
-              className="relative z-20 h-full"
-            />
+            <img src={heroWoman} alt="moisture" className="relative z-20 h-full" />
           </span>
         </div>
       </div>

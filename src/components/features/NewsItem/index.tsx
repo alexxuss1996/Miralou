@@ -2,8 +2,8 @@ import React from 'react';
 import { format, parse } from 'date-fns';
 type NewsItem = {
   description: string;
-  srcImg: string | undefined;
-  srcSet?: string | undefined;
+  srcImg?: string;
+  srcSet?: string;
   articleDate: string;
 };
 

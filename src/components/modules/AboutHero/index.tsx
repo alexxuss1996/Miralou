@@ -1,5 +1,4 @@
 import AboutUsImg from '@/assets/images/common/about-woman.jpg';
-import AboutUsImg2x from '@/assets/images/common/about-woman@2x.jpg';
 import { Button } from '@/components/shared/Button';
 import SectionHeading from '@/components/shared/SectionHeading';
 
@@ -28,12 +27,7 @@ const AboutHero = () => {
             </Button>
           </div>
           <div className="hidden self-center md:block md:w-5/12">
-            <img
-              src={AboutUsImg}
-              srcSet={`${AboutUsImg} 1x, ${AboutUsImg2x} 2x`}
-              alt="About Us"
-              className="max-w-full"
-            />
+            <img src={AboutUsImg} alt="About Us" className="max-w-full" />
           </div>
         </div>
       </div>

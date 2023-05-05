@@ -55,6 +55,13 @@ nav ul li a.active {
   @apply mr-4 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-primary text-white transition duration-500 ease-in-out;
 }
 
+.product-slider .slider-thumbs .swiper-slide {
+  @apply border-[3px] border-[transparent];
+}
+.product-slider .slider-thumbs .swiper-slide-thumb-active {
+  @apply border-[3px] border-red;
+}
+
 button[disabled].prev,
 button[disabled].next {
   color: #666;

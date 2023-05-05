@@ -14,7 +14,7 @@ const PopularProducts = () => {
     <section className="py-12">
       <div className="container">
         <SectionHeader
-          heading="Popular Product"
+          heading="Popular Products"
           paragraphText="Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien."
         />
         <ItemsWrapper>
@@ -25,6 +25,7 @@ const PopularProducts = () => {
               productDiscountPercent={parseFloat(product.discount_percent)}
               productName={product.name}
               productPrice={parseFloat(product.price)}
+              productId={product.id}
             />
           ))}
         </ItemsWrapper>

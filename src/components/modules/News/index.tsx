@@ -3,11 +3,11 @@ import NewsItem from '@/components/features/NewsItem';
 import SectionHeader from '@/components/features/SectionHeader';
 
 import News1img from '@/assets/images/news/news-1.jpg';
-import News1img2x from '@/assets/images/news/news-1@2x.jpg';
+import News1img2x from '@/assets/images/news/news-1-2x.jpg';
 import News2img from '@/assets/images/news/news-2.jpg';
-import News2img2x from '@/assets/images/news/news-2@2x.jpg';
+import News2img2x from '@/assets/images/news/news-2-2x.jpg';
 import News3img from '@/assets/images/news/news-3.jpg';
-import News3img2x from '@/assets/images/news/news-3@2x.jpg';
+import News3img2x from '@/assets/images/news/news-3-2x.jpg';
 
 const News = () => {
   return (
