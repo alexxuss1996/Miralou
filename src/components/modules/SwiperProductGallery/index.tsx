@@ -26,7 +26,7 @@ const SwiperProductGallery = ({ images }: ProductGalleryType) => {
   }, []);
 
   return (
-    <div className="product-slider flex h-[600px] w-[658px] flex-row-reverse overflow-hidden">
+    <div className="product-slider flex h-[600px] w-[480px] flex-row-reverse items-start overflow-hidden md:w-[658px]">
       <Swiper
         onSwiper={(swiper) => {
           if (swiper1Ref.current !== null) {
@@ -42,7 +42,7 @@ const SwiperProductGallery = ({ images }: ProductGalleryType) => {
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
         modules={[FreeMode, Navigation, Thumbs, Controller]}
-        className="h-full w-[480px]"
+        className="ml-0 h-full w-[360px] self-center sm:mx-2 sm:w-full md:mx-0 md:w-[480px] md:self-auto"
       >
         {images.map((imageUrl, index) => (
           <SwiperSlide key={index}>
@@ -63,7 +63,7 @@ const SwiperProductGallery = ({ images }: ProductGalleryType) => {
         slideToClickedSlide
         onSwiper={setThumbsSwiper}
         modules={[Navigation, Thumbs, Controller]}
-        className="slider-thumbs h-full"
+        className="slider-thumbs hidden h-full md:block"
       >
         {images.map((imageUrl, index) => (
           <SwiperSlide className="h-[135px] w-[140px] cursor-pointer" key={index}>

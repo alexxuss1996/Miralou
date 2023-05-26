@@ -4,23 +4,25 @@ import { useGetProductQuery } from '@/store/services/api/productsApi';
 import SwiperProductGallery from '@/components/modules/SwiperProductGallery';
 const ProductPage = () => {
   const { productId } = useParams();
-  const { data: product } = useGetProductQuery(productId!);
+  const { data: product, isError } = useGetProductQuery(productId!);
+
   return (
     <section className="py-10">
       <div className="container">
         {product ? (
           <>
             <SectionHeading text={`${product.name}`} />
-            <div className="flex">
-              <div className="w-7/12">
+            <div className="flex flex-col xl:flex-row">
+              <div className="xl:w-7/12">
                 <SwiperProductGallery images={product.images} />
               </div>
-              <div className="w-5/12">info</div>
+              <div className="xl:w-5/12">info</div>
             </div>
           </>
         ) : (
-          <p>Oops, something went wrong...</p>
+          <p>Loading...</p>
         )}
+        {isError && <p>Something went wrong...</p>}
       </div>
     </section>
   );
