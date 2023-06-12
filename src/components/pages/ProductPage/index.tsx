@@ -2,6 +2,8 @@ import SectionHeading from '@/components/shared/SectionHeading';
 import { useParams } from 'react-router-dom';
 import { useGetProductQuery } from '@/store/services/api/productsApi';
 import SwiperProductGallery from '@/components/modules/SwiperProductGallery';
+import ProductInfo from '@/components/modules/ProductInfo';
+
 const ProductPage = () => {
   const { productId } = useParams();
   const { data: product, isError } = useGetProductQuery(productId!);
@@ -16,7 +18,16 @@ const ProductPage = () => {
               <div className="xl:w-7/12">
                 <SwiperProductGallery images={product.images} />
               </div>
-              <div className="xl:w-5/12">info</div>
+              <div className="xl:w-5/12">
+                <ProductInfo
+                  code={product.code}
+                  name={product.name}
+                  price={product.price}
+                  description={product.description}
+                  rating={product.rating}
+                  discount_percent={product.discount_percent}
+                />
+              </div>
             </div>
           </>
         ) : (
