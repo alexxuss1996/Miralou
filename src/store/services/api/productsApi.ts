@@ -12,9 +12,18 @@ export type ProductResponseType = {
   code: string;
   tags: string[];
   rating: string;
+  reviews?: Review[];
   popularity: string;
   brand: string;
   id: string;
+};
+
+export type Review = {
+  id: string;
+  name: string;
+  personal_rating?: string;
+  comment: string;
+  date?: string;
 };
 
 export const productsApi = createApi({
