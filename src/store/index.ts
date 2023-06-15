@@ -1,17 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
-import { productsApi } from '@/store/services/api/productsApi';
+import { miralouApi } from '@/store/services/api/miralouApi';
 import productsSlice from '@/store/slices/productsSlice';
 import paginationSlice from '@/store/slices/paginationSlice';
 
 export const store = configureStore({
   reducer: {
-    [productsApi.reducerPath]: productsApi.reducer,
+    [miralouApi.reducerPath]: miralouApi.reducer,
     products: productsSlice,
     pagination: paginationSlice,
   },
 
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(productsApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(miralouApi.middleware),
 });
 
 // optional, but required for refetchOnFocus/refetchOnReconnect behaviors

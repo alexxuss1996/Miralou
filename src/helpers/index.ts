@@ -1,4 +1,4 @@
-import { ProductResponseType } from '@/store/services/api/productsApi';
+import { ProductResponseType } from '@/store/services/api/miralouApi';
 
 export const calculatePaginationPages = (pages: number) =>
   new Array(Math.ceil(pages)).fill(0).map((_, index) => index + 1);

@@ -1,6 +1,6 @@
 import SectionHeading from '@/components/shared/SectionHeading';
 import { useParams } from 'react-router-dom';
-import { useGetProductQuery } from '@/store/services/api/productsApi';
+import { useGetProductQuery } from '@/store/services/api/miralouApi';
 import SwiperProductGallery from '@/components/modules/SwiperProductGallery';
 import ProductInfo from '@/components/modules/ProductInfo';
 
@@ -23,9 +23,11 @@ const ProductPage = () => {
                   code={product.code}
                   name={product.name}
                   price={product.price}
+                  reviews={product.reviews}
                   description={product.description}
                   rating={product.rating}
                   discount_percent={product.discount_percent}
+                  tags={product.tags}
                 />
               </div>
             </div>

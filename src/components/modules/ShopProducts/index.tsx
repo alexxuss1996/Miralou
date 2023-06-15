@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import ItemsWrapper from '@/components/features/ItemsWrapper';
 import Paginator from '@/components/features/Paginator';
 import ProductsItem from '@/components/features/ProductsItem';
-import { useGetProductsQuery } from '@/store/services/api/productsApi';
+import { useGetProductsQuery } from '@/store/services/api/miralouApi';
 import { setProductsCount } from '@/store/slices/productsSlice';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { filterProducts, sortProducts, splitPages } from '@/helpers';

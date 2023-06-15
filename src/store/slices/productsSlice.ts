@@ -1,4 +1,4 @@
-import { ProductResponseType } from '@/store/services/api/productsApi';
+import { ProductResponseType } from '@/store/services/api/miralouApi';
 import { createSlice, PayloadAction, Draft } from '@reduxjs/toolkit';
 
 type ProductsState = {

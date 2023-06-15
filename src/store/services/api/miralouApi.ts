@@ -26,12 +26,12 @@ export type Review = {
   date?: string;
 };
 
-export const productsApi = createApi({
-  reducerPath: 'productsApi',
+export const miralouApi = createApi({
+  reducerPath: 'miralouApi',
   baseQuery: fetchBaseQuery({
     baseUrl: 'https://6409c1bcd16b1f3ed6dbf3b5.mockapi.io/api/v1/',
   }),
-  tagTypes: ['product'],
+  tagTypes: ['product', 'article'],
   endpoints: (builder) => ({
     getProducts: builder.query<ProductResponseType[], void>({
       query: () => ({
@@ -46,4 +46,4 @@ export const productsApi = createApi({
   }),
 });
 
-export const { useGetProductQuery, useGetProductsQuery } = productsApi;
+export const { useGetProductQuery, useGetProductsQuery } = miralouApi;

@@ -2,7 +2,7 @@ import ItemsWrapper from '@/components/features/ItemsWrapper';
 import ProductsItem from '@/components/features/ProductsItem';
 import SectionHeader from '@/components/features/SectionHeader';
 
-import { useGetProductsQuery } from '@/store/services/api/productsApi';
+import { useGetProductsQuery } from '@/store/services/api/miralouApi';
 const PopularProducts = () => {
   const { data: products } = useGetProductsQuery();
 

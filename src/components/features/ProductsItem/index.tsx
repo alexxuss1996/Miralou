@@ -51,7 +51,10 @@ const ProductsItem = ({
         ) : (
           <span className="text-gray-dark">{`$${productPrice?.toFixed(2)}`}</span>
         )}
-        <Link to={`/shop/${productId}`} className="text-gray-dark decoration-2 hover:underline">
+        <Link
+          to={`/shop/${productId}`}
+          className="text-gray-dark decoration-1 underline-offset-2 hover:underline"
+        >
           {productName}
         </Link>
       </div>
