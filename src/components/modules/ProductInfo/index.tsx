@@ -71,7 +71,7 @@ const ProductInfo = ({
           </div>
         </div>
         <button
-          className="h-[45px] bg-primary px-8  text-sm font-light uppercase text-white"
+          className="bg-transition h-[45px] border  border-[transparent] bg-primary px-8 text-sm font-light uppercase text-white hover:border-primary hover:bg-white hover:text-primary"
           type="button"
         >
           Add to cart
