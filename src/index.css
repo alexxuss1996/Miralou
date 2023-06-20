@@ -67,3 +67,10 @@ button[disabled].first,
 button[disabled].last {
   color: #ccc;
 }
+
+button[disabled].left-angle > svg,
+button[disabled].right-angle > svg {
+  fill: #bcb;
+  color: #bcb;
+  transition: all 0.2s ease;
+}

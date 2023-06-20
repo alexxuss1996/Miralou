@@ -3,12 +3,14 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 import { miralouApi } from '@/store/services/api/miralouApi';
 import productsSlice from '@/store/slices/productsSlice';
 import paginationSlice from '@/store/slices/paginationSlice';
+import productQuantitySlice from '@/store/slices/productQuantitySlice';
 
 export const store = configureStore({
   reducer: {
     [miralouApi.reducerPath]: miralouApi.reducer,
     products: productsSlice,
     pagination: paginationSlice,
+    productQuantity: productQuantitySlice,
   },
 
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(miralouApi.middleware),
