@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction, Draft } from '@reduxjs/toolkit';
 
 type PaginationState = {
   currentPage: number;
@@ -19,19 +19,19 @@ export const paginationSlice = createSlice({
     resetCurrentPage: (state) => {
       state.currentPage = 1;
     },
-    setCurrentPage: (state, action: PayloadAction<number>) => {
+    setCurrentPage: (state: Draft<PaginationState>, action: PayloadAction<number>) => {
       state.currentPage = action.payload;
     },
-    incrementCurrentPage: (state) => {
+    incrementCurrentPage: (state: Draft<PaginationState>) => {
       state.currentPage = state.currentPage + 1;
     },
-    decrementCurrentPage: (state) => {
+    decrementCurrentPage: (state: Draft<PaginationState>) => {
       state.currentPage = state.currentPage - 1;
     },
-    setNumberOfPages: (state, action: PayloadAction<number>) => {
+    setNumberOfPages: (state: Draft<PaginationState>, action: PayloadAction<number>) => {
       state.numberOfPages = action.payload;
     },
-    resetNumberOfPages: (state) => {
+    resetNumberOfPages: (state: Draft<PaginationState>) => {
       state.numberOfPages = 0;
     },
   },
