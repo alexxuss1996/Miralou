@@ -4,6 +4,7 @@ import ShoppingBagIcon from '@/assets/icons/vector/shopping-bag.svg';
 import HeartIcon from '@/assets/icons/vector/heart.svg';
 import EyeIcon from '@/assets/icons/vector/eye.svg';
 import { Link } from 'react-router-dom';
+import ProductPrice from '@/components/features/ProductPrice';
 
 type ProductType = {
   productImgUrl: string;
@@ -40,17 +41,7 @@ const ProductsItem = ({
       </span>
 
       <div className="flex flex-col items-center">
-        {productDiscountPercent ? (
-          <span className="flex justify-center gap-2">
-            <span className="text-gray-dark">{`$${(
-              (productPrice / 100) *
-              (100 - productDiscountPercent)
-            ).toFixed(2)}`}</span>
-            <span className="text-gray-dark/40 line-through">{`$${productPrice?.toFixed(2)}`}</span>
-          </span>
-        ) : (
-          <span className="text-gray-dark">{`$${productPrice?.toFixed(2)}`}</span>
-        )}
+        <ProductPrice productPrice={productPrice} productDiscountPercent={productDiscountPercent} />
         <Link
           to={`/shop/${productId}`}
           className="text-gray-dark decoration-1 underline-offset-2 hover:underline"

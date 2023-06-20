@@ -6,6 +6,7 @@ import { StarRating } from '@/components/features/StarRating';
 import { ProductResponseType } from '@/store/services/api/miralouApi';
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import ProductPrice from '@/components/features/ProductPrice';
 
 type ProductInfoProps = Pick<
   ProductResponseType,
@@ -47,7 +48,7 @@ const ProductInfo = ({
         )}
       </div>
       <p className="mb-4 text-sm font-light text-gray-dark">{description}</p>
-      <div className="mt-6 flex gap-[30px]">
+      <div className="mt-6 mb-4 flex gap-[30px]">
         <div className="flex h-[45px] w-[300px] items-center justify-between border border-gray pl-5 pr-3">
           <span className="inline-block text-[#696969]">Quantity</span>
           <div className="flex items-center gap-1 ">
@@ -77,6 +78,10 @@ const ProductInfo = ({
           Add to cart
         </button>
       </div>
+      <ProductPrice
+        productPrice={Number(price)}
+        productDiscountPercent={Number(discount_percent)}
+      />
     </>
   );
 };
