@@ -26,7 +26,7 @@ const ProductPage = () => {
                   reviews={product.reviews}
                   description={product.description}
                   rating={product.rating}
-                  discount_percent={product.discount_percent}
+                  discountPercent={product.discount_percent}
                   tags={product.tags}
                 />
               </div>
