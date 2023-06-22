@@ -18,7 +18,7 @@ const ProductPage = () => {
               <div className="xl:w-7/12">
                 <SwiperProductGallery images={product.images} />
               </div>
-              <div className="xl:w-5/12">
+              <div className="px-4 xl:w-5/12 xl:px-0">
                 <ProductInfo
                   code={product.code}
                   name={product.name}

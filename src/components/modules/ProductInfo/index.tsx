@@ -48,10 +48,10 @@ const ProductInfo = ({
         )}
       </div>
       <p className="mb-4 text-sm font-light text-gray-dark">{description}</p>
-      <div className="mt-6 mb-4 flex gap-[30px]">
+      <div className="mt-6 mb-4 flex flex-wrap gap-x-[30px] gap-y-6">
         <div className="flex h-[45px] w-[300px] items-center justify-between border border-gray pl-5 pr-3">
           <span className="inline-block text-[#696969]">Quantity</span>
-          <div className="flex items-center gap-1 ">
+          <div className="flex items-center gap-1">
             <button
               type="button"
               className="left-angle w-4 border-none bg-[transparent] disabled:text-gray-light"
@@ -65,23 +65,33 @@ const ProductInfo = ({
               type="button"
               className="right-angle w-4 border-none bg-[transparent] disabled:text-gray-light"
               onClick={handleIncrement}
-              disabled={productCount === 99}
+              disabled={productCount === 30}
             >
               <FaAngleRight className="text-[#8c8c8c]" fontSize={16} />
             </button>
           </div>
         </div>
         <button
-          className="bg-transition h-[45px] border  border-[transparent] bg-primary px-8 text-sm font-light uppercase text-white hover:border-primary hover:bg-white hover:text-primary"
+          className="bg-transition h-[45px] w-[300px] border  border-[transparent] bg-primary px-8 text-sm font-light uppercase text-white hover:border-primary hover:bg-white hover:text-primary md:w-auto"
           type="button"
         >
           Add to cart
         </button>
       </div>
-      <ProductPrice
-        productPrice={Number(price)}
-        productDiscountPercent={Number(discount_percent)}
-      />
+      <div className="mb-6">
+        <ProductPrice
+          productPrice={parseInt(price)}
+          productDiscountPercent={parseInt(discount_percent)}
+        />
+      </div>
+      <button
+        type="button"
+        className="bg-transition mb-6 border-b-2 border-b-accent text-sm font-semibold text-black hover:border-none"
+      >
+        Add to wishlist
+      </button>
+      <p className="mb-4">Product code: {code}</p>
+      <p>Tags: {tags.map((tag) => tag[0].toUpperCase() + tag.slice(1)).join(', ')}</p>
     </>
   );
 };
