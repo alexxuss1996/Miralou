@@ -8,10 +8,19 @@ import { ProductResponseType } from '@/store/services/api/miralouApi';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import ProductPrice from '@/components/features/ProductPrice';
 
-type ProductInfoProps = Pick<
+type ProductInfoProps = Omit<
   ProductResponseType,
-  'code' | 'name' | 'rating' | 'price' | 'description' | 'discount_percent' | 'reviews' | 'tags'
->;
+  | 'created_at'
+  | 'images'
+  | 'image_thumb_url'
+  | 'category'
+  | 'discount_percent'
+  | 'popularity'
+  | 'brand'
+  | 'id'
+> & {
+  discountPercent: string;
+};
 
 const ProductInfo = ({
   name,
@@ -20,7 +29,7 @@ const ProductInfo = ({
   description,
   tags,
   code,
-  discount_percent,
+  discountPercent,
   price,
 }: ProductInfoProps) => {
   const { productCount } = useAppSelector((state) => state.productQuantity);
@@ -81,12 +90,12 @@ const ProductInfo = ({
       <div className="mb-6">
         <ProductPrice
           productPrice={parseInt(price)}
-          productDiscountPercent={parseInt(discount_percent)}
+          productDiscountPercent={parseInt(discountPercent)}
         />
       </div>
       <button
         type="button"
-        className="bg-transition mb-6 border-b-2 border-b-accent text-sm font-semibold text-black hover:border-none"
+        className="bg-transition mb-6 border-b-2 border-b-accent text-sm font-semibold text-black hover:border-[transparent]"
       >
         Add to wishlist
       </button>
