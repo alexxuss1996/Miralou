@@ -8,7 +8,7 @@ import { ProductResponseType } from '@/store/services/api/miralouApi';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import ProductPrice from '@/components/features/ProductPrice';
 
-type ProductInfoProps = Omit<
+type ProductInfoType = Omit<
   ProductResponseType,
   | 'created_at'
   | 'images'
@@ -31,7 +31,7 @@ const ProductInfo = ({
   code,
   discountPercent,
   price,
-}: ProductInfoProps) => {
+}: ProductInfoType) => {
   const { productCount } = useAppSelector((state) => state.productQuantity);
   const dispatch = useAppDispatch();
 
