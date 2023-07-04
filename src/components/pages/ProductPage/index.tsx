@@ -4,6 +4,7 @@ import { useGetProductQuery } from '@/store/services/api/miralouApi';
 import SwiperProductGallery from '@/components/modules/SwiperProductGallery';
 import ProductInfo from '@/components/modules/ProductInfo';
 import ProductTabs from '@/components/modules/ProductTabs';
+import SimilarProducts from '@/components/modules/SimilarProducts';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -33,6 +34,7 @@ const ProductPage = () => {
               </div>
             </div>
             <ProductTabs description={product.description} reviews={product.reviews} />
+            <SimilarProducts category={product.category} id={product.id} />
           </>
         ) : (
           <p>Loading...</p>
