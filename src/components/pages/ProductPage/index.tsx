@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useGetProductQuery } from '@/store/services/api/miralouApi';
 import SwiperProductGallery from '@/components/modules/SwiperProductGallery';
 import ProductInfo from '@/components/modules/ProductInfo';
+import ProductTabs from '@/components/modules/ProductTabs';
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -14,7 +15,7 @@ const ProductPage = () => {
         {product ? (
           <>
             <SectionHeading text={`${product.name}`} />
-            <div className="flex flex-col xl:flex-row">
+            <div className="mb-8 flex flex-col xl:flex-row">
               <div className="xl:w-7/12">
                 <SwiperProductGallery images={product.images} />
               </div>
@@ -31,6 +32,7 @@ const ProductPage = () => {
                 />
               </div>
             </div>
+            <ProductTabs description={product.description} reviews={product.reviews} />
           </>
         ) : (
           <p>Loading...</p>

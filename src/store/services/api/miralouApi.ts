@@ -22,6 +22,7 @@ export type Review = {
   id: string;
   name: string;
   personal_rating?: string;
+  personal_avatar?: string;
   comment: string;
   date?: string;
 };
