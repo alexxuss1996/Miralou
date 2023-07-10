@@ -2,12 +2,10 @@ import ItemsWrapper from '@/components/features/ItemsWrapper';
 import ProductsItem from '@/components/features/ProductsItem';
 import SectionHeader from '@/components/features/SectionHeader';
 
-import { useGetProductsQuery } from '@/store/services/api/miralouApi';
+import { ProductResponseType, useGetProductsQuery } from '@/store/services/api/miralouApi';
 
-type SimilarProductsProps = {
-  id: string;
-  category: string;
-};
+type SimilarProductsProps = Pick<ProductResponseType, 'id' | 'category'>;
+
 const SimilarProducts = ({ id, category }: SimilarProductsProps) => {
   const { data: products } = useGetProductsQuery();
 
