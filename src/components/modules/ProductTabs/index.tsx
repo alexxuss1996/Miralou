@@ -25,18 +25,21 @@ const ProductTabs = ({ reviews, description }: ProductTabsProps) => {
       </TabPanel>
       <TabPanel className="flex flex-col gap-8">
         {reviews?.map((review) => (
-          <div key={review.id} className="flex h-60 gap-2 bg-primary text-secondary">
+          <div
+            key={review.id}
+            className="flex flex-col items-center gap-2 bg-primary py-8 text-secondary md:h-72 md:flex-row md:items-stretch md:p-0 lg:h-60"
+          >
             {review.personal_avatar ? (
               <img
                 src={review.personal_avatar}
                 alt={review.name}
-                className="max-h-full w-52 object-cover"
+                className="w-52 object-cover lg:max-h-full"
               />
             ) : (
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
                 alt="Avatar Placeholder"
-                className="max-h-full w-52 object-cover"
+                className="w-52 object-cover lg:max-h-full"
               />
             )}
             <div className="px-8 py-5 text-center font-light">
