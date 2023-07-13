@@ -14,6 +14,7 @@ export type ProductResponseType = {
   rating: string;
   reviews?: Review[];
   popularity: string;
+  is_available: boolean;
   brand: string;
   id: string;
 };
