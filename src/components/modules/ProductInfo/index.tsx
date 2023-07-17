@@ -18,6 +18,7 @@ type ProductInfoType = Omit<
   | 'popularity'
   | 'brand'
   | 'id'
+  | 'is_available'
 > & {
   discountPercent: string;
 };
