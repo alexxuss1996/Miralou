@@ -8,17 +8,9 @@ import { ProductResponseType } from '@/store/services/api/miralouApi';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import ProductPrice from '@/components/features/ProductPrice';
 
-type ProductInfoType = Omit<
+type ProductInfoType = Pick<
   ProductResponseType,
-  | 'created_at'
-  | 'images'
-  | 'image_thumb_url'
-  | 'category'
-  | 'discount_percent'
-  | 'popularity'
-  | 'brand'
-  | 'id'
-  | 'is_available'
+  'name' | 'rating' | 'reviews' | 'description' | 'tags' | 'code' | 'price'
 > & {
   discountPercent: string;
 };
