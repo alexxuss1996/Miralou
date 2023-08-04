@@ -3,14 +3,14 @@ import ItemsWrapper from '@/components/features/ItemsWrapper';
 import Paginator from '@/components/features/Paginator';
 import ProductsItem from '@/components/features/ProductsItem';
 import { useGetProductsQuery } from '@/store/services/api/miralouApi';
-import { setProductsCount } from '@/store/slices/productsSlice';
+import { setProductsCount } from '@/store/slices/products/productsSlice';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import { filterProducts, sortProducts, splitPages } from '@/helpers';
 import {
   resetNumberOfPages,
   setCurrentPage,
   setNumberOfPages,
-} from '@/store/slices/paginationSlice';
+} from '@/store/slices/pagination/paginationSlice';
 
 const ShopProducts = () => {
   const { isLoading, data: products } = useGetProductsQuery();

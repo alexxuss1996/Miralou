@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { miralouApi } from '@/store/services/api/miralouApi';
-import productsSlice from '@/store/slices/productsSlice';
-import paginationSlice from '@/store/slices/paginationSlice';
-import productQuantitySlice from '@/store/slices/productQuantitySlice';
+import productsSlice from '@/store/slices/products/productsSlice';
+import paginationSlice from '@/store/slices/pagination/paginationSlice';
+import productQuantitySlice from '@/store/slices/products/productQuantitySlice';
 
 export const store = configureStore({
   reducer: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { increment, decrement } from '@/store/slices/productQuantitySlice';
+import { increment, decrement } from '@/store/slices/products/productQuantitySlice';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 
 import { StarRating } from '@/components/features/StarRating';

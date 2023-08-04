@@ -1,6 +1,11 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/hooks';
-import { setCategories, setBrands, setPriceRange, setSortBy } from '@/store/slices/productsSlice';
+import {
+  setCategories,
+  setBrands,
+  setPriceRange,
+  setSortBy,
+} from '@/store/slices/products/productsSlice';
 import { capitalizeFirstLetter } from '@/helpers';
 
 type PanelBodyType = {

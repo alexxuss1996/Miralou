@@ -7,7 +7,7 @@ import {
   decrementCurrentPage,
   incrementCurrentPage,
   setCurrentPage,
-} from '@/store/slices/paginationSlice';
+} from '@/store/slices/pagination/paginationSlice';
 type PaginatorType = {
   numberOfPages: number;
   currentPage: number;

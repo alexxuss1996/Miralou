@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/hooks';
 import Select, { StylesConfig, ActionMeta, OnChangeValue } from 'react-select';
-import { setSortBy } from '@/store/slices/productsSlice';
+import { setSortBy } from '@/store/slices/products/productsSlice';
 type Option = {
   value: string;
   label: string;
