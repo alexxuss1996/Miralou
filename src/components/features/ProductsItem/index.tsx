@@ -5,14 +5,17 @@ import HeartIcon from '@/assets/icons/vector/heart.svg';
 import EyeIcon from '@/assets/icons/vector/eye.svg';
 import { Link } from 'react-router-dom';
 import ProductPrice from '@/components/features/ProductPrice';
+import { useAppDispatch } from '@/hooks';
+import { addToCart, calculateTotals, increaseAmount } from '@/store/slices/cart/cartSlice';
 
-type ProductType = {
+export type ProductType = {
   productImgUrl: string;
   productName: string;
   popularity?: number;
   productPrice: number;
   productDiscountPercent?: number;
   productId: string;
+  isAvailable?: boolean;
 };
 
 const ProductsItem = ({
@@ -22,6 +25,22 @@ const ProductsItem = ({
   productDiscountPercent,
   productId,
 }: ProductType) => {
+  const dispatch = useAppDispatch();
+
+  const handleDispatchAddToCart = () => {
+    dispatch(
+      addToCart({
+        productId,
+        productName,
+        productPrice,
+        productDiscountPercent,
+        productImgUrl,
+        amount: 1,
+      })
+    );
+    dispatch(calculateTotals());
+  };
+
   return (
     <li className="flex flex-col flex-wrap items-center gap-5 text-sm font-light">
       <span className="relative block max-h-[360px] md:max-w-[300px]">
@@ -33,9 +52,11 @@ const ProductsItem = ({
         )}
         <span className="group/overlay bg-transition absolute inset-0 z-20 bg-opacity-0 hover:cursor-pointer hover:bg-black-alt/40">
           <span className="mx-6 flex h-full flex-col items-end justify-center gap-3 opacity-0 group-hover/overlay:opacity-100">
-            <OverlayLink src={ShoppingBagIcon} />
+            <OverlayLink onClickFn={handleDispatchAddToCart} src={ShoppingBagIcon} />
             <OverlayLink src={HeartIcon} />
-            <OverlayLink src={EyeIcon} />
+            <Link to={`/shop/${productId}`}>
+              <OverlayLink src={EyeIcon} />
+            </Link>
           </span>
         </span>
       </span>
