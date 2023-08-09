@@ -4,6 +4,7 @@ import { miralouApi } from '@/store/services/api/miralouApi';
 import productsSlice from '@/store/slices/products/productsSlice';
 import paginationSlice from '@/store/slices/pagination/paginationSlice';
 import productQuantitySlice from '@/store/slices/products/productQuantitySlice';
+import cartSlice from '@/store/slices/cart/cartSlice';
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     products: productsSlice,
     pagination: paginationSlice,
     productQuantity: productQuantitySlice,
+    cart: cartSlice,
   },
 
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(miralouApi.middleware),
