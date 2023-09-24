@@ -7,21 +7,26 @@ import { ProductResponseType } from '@/store/services/api/miralouApi';
 
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import ProductPrice from '@/components/features/ProductPrice';
+import { addToCart } from '@/store/slices/cart/cartSlice';
 
-type ProductInfoType = Pick<
+type ProductInfoType = Omit<
   ProductResponseType,
-  'name' | 'rating' | 'reviews' | 'description' | 'tags' | 'code' | 'price'
+  'images' | 'discount_percent' | 'brand' | 'created_at' | 'is_available' | 'image_thumb_url'
 > & {
   discountPercent: string;
+  productImgUrl: string;
 };
 
 const ProductInfo = ({
   name,
   rating,
   reviews,
+  id,
   description,
+  category,
   tags,
   code,
+  productImgUrl,
   discountPercent,
   price,
 }: ProductInfoType) => {
@@ -76,6 +81,18 @@ const ProductInfo = ({
         <button
           className="bg-transition h-[45px] w-[300px] border  border-[transparent] bg-primary px-8 text-sm font-light uppercase text-white hover:border-primary hover:bg-white hover:text-primary md:w-auto"
           type="button"
+          onClick={() => {
+            dispatch(
+              addToCart({
+                amount: productCount,
+                productPrice: parseFloat(price),
+                productId: id,
+                category,
+                productName: name,
+                productImgUrl,
+              })
+            );
+          }}
         >
           Add to cart
         </button>

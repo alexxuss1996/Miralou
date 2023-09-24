@@ -1,4 +1,5 @@
 import { ProductType } from '@/components/features/ProductsItem';
+import { getCurrentPrice } from '@/helpers';
 import { createSlice, PayloadAction, Draft } from '@reduxjs/toolkit';
 
 export type CartItemType = ProductType & {
@@ -24,12 +25,12 @@ const cartSlice = createSlice({
       let amount = 0;
       let total = 0;
       state.cartItems.forEach((item) => {
-        let price: number = item?.productDiscountPercent
-          ? item.productPrice - (item.productPrice * item.productDiscountPercent) / 100
-          : item.productPrice;
-        price = price.toFixed(2) as unknown as number;
+        const currentPrice: number = getCurrentPrice(
+          item.productPrice,
+          item.productDiscountPercent
+        ).toFixed(2) as unknown as number;
         amount += item?.amount;
-        total += item?.amount * price;
+        total += item?.amount * currentPrice;
       });
       state.totalPrice = total;
       state.totalItems = amount;

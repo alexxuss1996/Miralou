@@ -60,6 +60,7 @@ const ShopProducts = () => {
                 productImgUrl={product.image_thumb_url}
                 productDiscountPercent={Number(product.discount_percent)}
                 key={product.id}
+                category={product.category}
                 productName={product.name}
                 productId={product.id}
               />

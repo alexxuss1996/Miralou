@@ -21,6 +21,7 @@ const PopularProducts = () => {
           {popularProducts?.map((product) => (
             <ProductsItem
               key={product.id}
+              category={product.category}
               productImgUrl={product.image_thumb_url}
               productDiscountPercent={parseFloat(product.discount_percent)}
               productName={product.name}

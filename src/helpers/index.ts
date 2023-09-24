@@ -1,4 +1,5 @@
 import { ProductResponseType } from '@/store/services/api/miralouApi';
+import exp from 'constants';
 
 export const calculatePaginationPages = (pages: number) =>
   new Array(Math.ceil(pages)).fill(0).map((_, index) => index + 1);
@@ -99,4 +100,11 @@ export const sortProducts = (sortedProducts: ProductResponseType[], sortBy: stri
     default:
       return sortedProducts;
   }
+};
+
+export const getCurrentPrice = (price: number, discountPercent?: number) => {
+  if (discountPercent) {
+    return price - (price * discountPercent) / 100;
+  }
+  return price;
 };

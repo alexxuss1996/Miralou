@@ -15,7 +15,7 @@ const ProductPage = () => {
       <div className="container">
         {product ? (
           <>
-            <SectionHeading text={`${product.name}`} />
+            <SectionHeading text={product.name} />
             <div className="mb-8 flex flex-col xl:flex-row">
               <div className="xl:w-7/12">
                 <SwiperProductGallery images={product.images} />
@@ -24,7 +24,11 @@ const ProductPage = () => {
                 <ProductInfo
                   code={product.code}
                   name={product.name}
+                  productImgUrl={product.image_thumb_url}
+                  category={product.category}
                   price={product.price}
+                  id={product.id}
+                  popularity={product.popularity}
                   reviews={product.reviews}
                   description={product.description}
                   rating={product.rating}

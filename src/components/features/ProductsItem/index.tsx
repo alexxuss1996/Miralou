@@ -15,6 +15,7 @@ export type ProductType = {
   productPrice: number;
   productDiscountPercent?: number;
   productId: string;
+  category: string;
   isAvailable?: boolean;
 };
 
@@ -24,6 +25,7 @@ const ProductsItem = ({
   productPrice,
   productDiscountPercent,
   productId,
+  category,
 }: ProductType) => {
   const dispatch = useAppDispatch();
 
@@ -32,6 +34,7 @@ const ProductsItem = ({
       addToCart({
         productId,
         productName,
+        category,
         productPrice,
         productDiscountPercent,
         productImgUrl,
