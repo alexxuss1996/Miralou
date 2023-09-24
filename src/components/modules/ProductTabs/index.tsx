@@ -6,7 +6,7 @@ type ProductTabsProps = Pick<ProductResponseType, 'reviews' | 'description'>;
 
 const ProductTabs = ({ reviews, description }: ProductTabsProps) => {
   return (
-    <Tabs>
+    <Tabs className="p-2">
       <TabList className="mb-8 flex flex-row gap-4 border-b border-gray py-3">
         <Tab className="cursor-pointer text-xl" selectedClassName="text-accent">
           Description
