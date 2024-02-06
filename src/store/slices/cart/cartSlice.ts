@@ -59,14 +59,26 @@ const cartSlice = createSlice({
       { payload }: PayloadAction<{ productId: string }>
     ) => {
       const cartItem = state.cartItems.find((item) => item.productId === payload.productId);
+      const currentPrice: number = getCurrentPrice(
+        cartItem!.productPrice,
+        cartItem!.productDiscountPercent
+      );
       cartItem!.amount += 1;
+      state.totalItems += 1;
+      state.totalPrice += currentPrice;
     },
     decreaseAmount: (
       state: Draft<CartStateType>,
       { payload }: PayloadAction<{ productId: string }>
     ) => {
       const cartItem = state.cartItems.find((item) => item.productId === payload.productId);
+      const currentPrice: number = getCurrentPrice(
+        cartItem!.productPrice,
+        cartItem!.productDiscountPercent
+      );
       cartItem!.amount -= 1;
+      state.totalItems -= 1;
+      state.totalPrice -= currentPrice;
     },
     clearCart: (state: Draft<CartStateType>) => {
       state.cartItems = [];
